@@ -4,11 +4,14 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inconsolata">
+<link rel="stylesheet" href="https://www.w3schools.com/lib/w3-colors-2017.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap" rel="stylesheet">
 <style>
 body, html {
   height: 100%;
-  font-family: "Inconsolata", sans-serif;
+  font-family: "Lato", sans-serif;
 }
 
 .bgimg {
@@ -44,14 +47,17 @@ body, html {
 
 <!-- Header with image -->
 <header class="bgimg w3-display-container w3-grayscale-min" id="home">
-  <div class="w3-display-bottomleft w3-center w3-padding-large w3-hide-small">
-    <span class="w3-tag">Valencia - 12 de Junio de 2021</span>
+  <div class="w3-display-bottommiddle w3-center">
+    <span class=""><strong>Sábado 12 de Junio de 2021<br>De 10:30 a 15:00<br>CM Valencia Tennis Center. <br>Carrer de Vicente la Roda, 22.</strong></span>
   </div>
   <div class="w3-display-middle w3-center">
-    <span class="w3-text-white" style="font-size:90px">Torneo<br>Padel</span>
+    <span class="w3-text-white" style="font-size:80px">Torneo Padel<br>Valencia</span>
   </div>
-  <div class="w3-display-bottomright w3-center w3-padding-large">
-    <span class="w3-text-white">CM Valencia Tennis Center. Carrer de Vicente la Roda, 22, 46011 València, Valencia.</span>
+  <div class="w3-display-bottomright w3-right-align w3-padding-large">
+    <span class="w3-tag w3-2017-tawny-port" style="max-width:50%"><strong>15€/persona</strong><br>Incluye agua, bolas, y regalos para los mejores ubicados.</span>
+  </div>
+  <div class="w3-display-bottomleft w3-left-align w3-padding-large">
+    <span class="w3-tag w3-2017-navy-peony" style="max-width:50%"><strong>Nivel 2.5 hasta 3.5</strong><br>Abierto a chicos y chicas<br>Fase Clasificatoria (Grupos) y Fase Final (2 categorías según clasificación en primera fase).<br>Máximo número de partidos para todas las parejas</span>
   </div>
 </header>
 
@@ -62,7 +68,7 @@ body, html {
 <div class="w3-container" id="menu">
   <div class="w3-content" style="max-width:90%">
  
-    <h5 class="w3-center w3-padding-48"><span class="w3-tag w3-wide">RESULTADOS</span></h5>
+    <h5 class="w3-center w3-padding-48"><span class="w3-tag w3-indigo w3-wide">RESULTADOS</span></h5>
   
     <div class="w3-row w3-center w3-card w3-padding">
       <a href="javascript:void(0)" onclick="openMenu(event, 'Groups');" id="myLink">
@@ -119,24 +125,15 @@ body, html {
 <!-- About Container -->
 <div class="w3-container" id="about">
   <div class="w3-content" style="max-width:700px">
-    <h5 class="w3-center w3-padding-64"><span class="w3-tag w3-wide">Reglas y Sistema de Juego</span></h5>
+    <h5 class="w3-center w3-padding-64"><span class="w3-tag w3-indigo w3-wide">REGLAS Y SISTEMA DE JUEGO</span></h5>
     <p>Esta fase servirá para determinar cuáles son las parejas que jugarán categoría 1 y cuáles la categoría 2, de manera que el nivel de juego en ambas categorías sea lo más parejo posible.
-.</p>
-    <div class="w3-panel w3-leftbar w3-light-grey">
-      <p><i>"Use products from nature for what it's worth - but never too early, nor too late." Fresh is the new sweet.</i></p>
-      <p>Chef, Coffeeist and Owner: Liam Brown</p>
-    </div>
-    <img src="/w3images/coffeeshop.jpg" style="width:100%;max-width:1000px" class="w3-margin-top">
-    <p><strong>Opening hours:</strong> everyday from 6am to 5pm.</p>
-    <p><strong>Address:</strong> 15 Adr street, 5015, NY</p>
-  </div>
 </div>
 
 
 <!-- Contact/Area Container -->
 <div class="w3-container" id="where" style="padding-bottom:32px;">
   <div class="w3-content" style="max-width:700px">
-    <h5 class="w3-center w3-padding-48"><span class="w3-tag w3-wide">LUGAR</span></h5>
+    <h5 class="w3-center w3-padding-48"><span class="w3-tag w3-indigo w3-wide">LUGAR</span></h5>
     <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12318.102117451448!2d-0.3299039!3d39.4800464!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x568e98966e938b34!2sAcademia%20de%20Tenis%20Valencia%20Tennis%20Center!5e0!3m2!1sen!2ses!4v1622313847419!5m2!1sen!2ses" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
     <p><strong>Info</strong> Para inscripciones, dudas y sugerencias por favor déjanos un mensaje.</p>
     <form action="/action_page.php" target="_blank">
@@ -166,10 +163,10 @@ function openMenu(evt, menuName) {
   }
   tablinks = document.getElementsByClassName("tablink");
   for (i = 0; i < x.length; i++) {
-    tablinks[i].className = tablinks[i].className.replace(" w3-dark-grey", "");
+    tablinks[i].className = tablinks[i].className.replace(" w3-blue", "");
   }
   document.getElementById(menuName).style.display = "block";
-  evt.currentTarget.firstElementChild.className += " w3-dark-grey";
+  evt.currentTarget.firstElementChild.className += " w3-blue";
 }
 document.getElementById("myLink").click();
 </script>
