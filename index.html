@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+<title>W3.CSS Template</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inconsolata">
+<style>
+body, html {
+  height: 100%;
+  font-family: "Inconsolata", sans-serif;
+}
+
+.bgimg {
+  background-position: center;
+  background-size: cover;
+  background-image: url("images/pexels-bogdan-glisik-1405355.jpg");
+  min-height: 75%;
+}
+
+.menu {
+  display: none;
+}
+</style>
+<body>
+
+<!-- Links (sit on top) -->
+<div class="w3-top">
+  <div class="w3-row w3-padding w3-indigo">
+    <div class="w3-col s3">
+      <a href="#" class="w3-button w3-block w3-indigo">PRINCIPAL</a>
+    </div>
+    <div class="w3-col s3">
+      <a href="#about" class="w3-button w3-block w3-indigo">INFORMACION</a>
+    </div>
+    <div class="w3-col s3">
+      <a href="#menu" class="w3-button w3-block w3-indigo">RESULTADOS</a>
+    </div>
+    <div class="w3-col s3">
+      <a href="#where" class="w3-button w3-block w3-indigo">CONTACTO</a>
+    </div>
+  </div>
+</div>
+
+<!-- Header with image -->
+<header class="bgimg w3-display-container w3-grayscale-min" id="home">
+  <div class="w3-display-bottomleft w3-center w3-padding-large w3-hide-small">
+    <span class="w3-tag">Valencia - 12 de Junio de 2021</span>
+  </div>
+  <div class="w3-display-middle w3-center">
+    <span class="w3-text-white" style="font-size:90px">Torneo<br>Padel</span>
+  </div>
+  <div class="w3-display-bottomright w3-center w3-padding-large">
+    <span class="w3-text-white">CM Valencia Tennis Center. Carrer de Vicente la Roda, 22, 46011 València, Valencia.</span>
+  </div>
+</header>
+
+<!-- Add a background color and large text to the whole page -->
+<div class="w3-light-grey w3-large">
+
+<!-- Menu Container -->
+<div class="w3-container" id="menu">
+  <div class="w3-content" style="max-width:90%">
+ 
+    <h5 class="w3-center w3-padding-48"><span class="w3-tag w3-wide">RESULTADOS</span></h5>
+  
+    <div class="w3-row w3-center w3-card w3-padding">
+      <a href="javascript:void(0)" onclick="openMenu(event, 'Groups');" id="myLink">
+        <div class="w3-col s2 tablink">Grupos</div>
+      </a>
+      <a href="javascript:void(0)" onclick="openMenu(event, 'CatA1');">
+        <div class="w3-col s2 tablink">Categoría A</div>
+      </a>
+      <a href="javascript:void(0)" onclick="openMenu(event, 'CatA2');">
+        <div class="w3-col s2 tablink">Categoría A (pos 5-8)</div>
+      </a>
+      <a href="javascript:void(0)" onclick="openMenu(event, 'CatB1');">
+        <div class="w3-col s2 tablink">Categoría B</div>
+      </a>
+      <a href="javascript:void(0)" onclick="openMenu(event, 'CatB2');">
+        <div class="w3-col s2 tablink">Categoría B (pos 5-8)</div>
+      </a>
+    </div>
+
+    <div id="Groups" class="w3-container menu w3-padding-48 w3-card">
+      <div class="container">
+        <iframe src="https://score7.io/whq1r4mxu1/knockout" width="100%" height="1000px" frameborder="0"></iframe>
+      </div>
+    </div>
+
+    <div id="CatA1" class="w3-container menu w3-padding-48 w3-card">
+      <div class="container">
+        <iframe src="https://score7.io/whq1r4mxu1/knockout" width="100%" height="1000px" frameborder="0"></iframe>
+      </div>
+    </div> 
+
+    <div id="CatA2" class="w3-container menu w3-padding-48 w3-card">
+      <div class="container">
+        <iframe src="https://score7.io/whq1r4mxu1/knockout" width="100%" height="1000px" frameborder="0"></iframe>
+      </div>
+    </div>
+
+    <div id="CatB1" class="w3-container menu w3-padding-48 w3-card">
+      <div class="container">
+        <iframe src="https://score7.io/whq1r4mxu1/knockout" width="100%" height="400px" frameborder="0"></iframe>
+      </div>
+    </div>
+
+    <div id="CatB2" class="w3-container menu w3-padding-48 w3-card">
+      <div class="container">
+        <iframe src="https://score7.io/whq1r4mxu1/knockout" width="100%" height="1000px" frameborder="0"></iframe>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+
+<!-- About Container -->
+<div class="w3-container" id="about">
+  <div class="w3-content" style="max-width:700px">
+    <h5 class="w3-center w3-padding-64"><span class="w3-tag w3-wide">Reglas y Sistema de Juego</span></h5>
+    <p>Esta fase servirá para determinar cuáles son las parejas que jugarán categoría 1 y cuáles la categoría 2, de manera que el nivel de juego en ambas categorías sea lo más parejo posible.
+.</p>
+    <div class="w3-panel w3-leftbar w3-light-grey">
+      <p><i>"Use products from nature for what it's worth - but never too early, nor too late." Fresh is the new sweet.</i></p>
+      <p>Chef, Coffeeist and Owner: Liam Brown</p>
+    </div>
+    <img src="/w3images/coffeeshop.jpg" style="width:100%;max-width:1000px" class="w3-margin-top">
+    <p><strong>Opening hours:</strong> everyday from 6am to 5pm.</p>
+    <p><strong>Address:</strong> 15 Adr street, 5015, NY</p>
+  </div>
+</div>
+
+
+<!-- Contact/Area Container -->
+<div class="w3-container" id="where" style="padding-bottom:32px;">
+  <div class="w3-content" style="max-width:700px">
+    <h5 class="w3-center w3-padding-48"><span class="w3-tag w3-wide">LUGAR</span></h5>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12318.102117451448!2d-0.3299039!3d39.4800464!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x568e98966e938b34!2sAcademia%20de%20Tenis%20Valencia%20Tennis%20Center!5e0!3m2!1sen!2ses!4v1622313847419!5m2!1sen!2ses" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+    <p><strong>Info</strong> Para inscripciones, dudas y sugerencias por favor déjanos un mensaje.</p>
+    <form action="/action_page.php" target="_blank">
+      <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Nombre" required name="Nombre"></p>
+      <p><input class="w3-input w3-padding-16 w3-border" type="email" placeholder="Email" required name="Email"></p>
+      <p><input class="w3-input w3-padding-16 w3-border" type="number" placeholder="Telefono" required name="Telefono"></p>
+      <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Mensaje" required name="Mensaje"></p>
+      <p><button class="w3-button w3-indigo" type="submit">ENVIAR</button></p>
+    </form>
+  </div>
+</div>
+
+<!-- End page content -->
+</div>
+
+<!-- Footer -->
+<footer class="w3-center w3-light-grey w3-padding-48 w3-large">
+</footer>
+
+<script>
+// Tabbed Menu
+function openMenu(evt, menuName) {
+  var i, x, tablinks;
+  x = document.getElementsByClassName("menu");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablink");
+  for (i = 0; i < x.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" w3-dark-grey", "");
+  }
+  document.getElementById(menuName).style.display = "block";
+  evt.currentTarget.firstElementChild.className += " w3-dark-grey";
+}
+document.getElementById("myLink").click();
+</script>
+
+</body>
+</html>
