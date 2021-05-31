@@ -8,11 +8,20 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
 <link rel="preconnect" href="https://fonts.gstatic.com">
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Gothic+A1:wght@900&display=swap" rel="stylesheet">
 <style>
 body, html {
   height: 100%;
   font-family: "Lato", sans-serif;
 }
+
+ h1{
+  height: 100%;
+  font-family: "Gothic A1", sans-serif;
+  color: #480032;
+  text-shadow: 2px 2px 4px #000000
+}
+
 
 .bgimg {
   background-position: center;
@@ -30,7 +39,7 @@ body, html {
 
 <!-- Links (sit on top) -->
 <div class="w3-top">
-  <div class="w3-row w3-padding w3-indigo">
+  <div class="w3-row w3-padding w3-indigo" style="font-size:1vw">
     <div class="w3-col s3">
       <a href="#" class="w3-button w3-block w3-indigo">PRINCIPAL</a>
     </div>
@@ -48,50 +57,45 @@ body, html {
 
 <!-- Header with image -->
 <header class="bgimg w3-display-container" id="home">
-  <div class="w3-display-top w3-padding-64 w3-center">
-    <span class="w3-text-white" style="font-size:70px">Torneo Padel<br>Valencia</span>
+  <div class="w3-display-topmiddle w3-center w3-margin-top w3-padding-64">
+    <h1 class="" style="font-size:80px">Torneo Padel<br>Valencia</h1>
   </div>
-  <div class="w3-display-bottommiddle w3-center">
-    <span class=""><strong>Sábado 12 de Junio de 2021<br>De 10:30 a 15:00<br>CM Valencia Tennis Center. <br>Carrer de Vicente la Roda, 22.</strong></span>
-  </div>
-  <div class="w3-display-bottomright w3-right-align w3-padding-large">
-    <span class="w3-tag w3-2017-tawny-port" style="max-width:50%"><strong>15€/persona</strong><br>Incluye agua, bolas, y regalos para los mejores ubicados.</span>
-  </div>
-  <div class="w3-display-bottomleft w3-left-align w3-padding-large">
-    <span class="w3-tag w3-2017-navy-peony" style="max-width:50%"><strong>Nivel 2.5 hasta 3.5</strong><br>Abierto a chicos y chicas<br>Fase Clasificatoria (Grupos) y Fase Final (2 categorías según clasificación en primera fase).<br>Máximo número de partidos para todas las parejas</span>
-  </div>
+ 	<div class="w3-display-bottommiddle w3-center" style="width:30%;font-size:20px;font-weight:900;color:#223A5E">
+	  <span>Sábado 12 de Junio de 2021<br>De 10:30 a 15:00<br>CM Valencia Tennis Center. <br>Carrer de Vicente la Roda, 22.</span>
+	</div>
 </header>
+
 
 <!-- Add a background color and large text to the whole page -->
 <div class="w3-light-grey w3-large">
 
 <!-- Menu Container -->
 <div class="w3-container" id="menu">
-  <div class="w3-content" style="max-width:90%">
+  <div class="w3-content" style="max-width:70%">
  
-    <h5 class="w3-center w3-padding-48"><span class="w3-tag w3-indigo w3-wide">RESULTADOS</span></h5>
+    <h5 class="w3-center w3-padding-48"><span class="w3-tag w3-indigo w3-wide">CALENDARIO Y RESULTADOS</span></h5>
   
     <div class="w3-row w3-center w3-card w3-padding">
       <a href="javascript:void(0)" onclick="openMenu(event, 'Groups');" id="myLink">
-        <div class="w3-col s2 tablink">Grupos</div>
+        <div class="w3-col s2 w3-mobile tablink">Grupos</div>
       </a>
       <a href="javascript:void(0)" onclick="openMenu(event, 'CatA1');">
-        <div class="w3-col s2 tablink">Categoría A</div>
+        <div class="w3-col s2 w3-mobile tablink">Categoría A</div>
       </a>
       <a href="javascript:void(0)" onclick="openMenu(event, 'CatA2');">
-        <div class="w3-col s2 tablink">Categoría A (pos 5-8)</div>
+        <div class="w3-col s2 w3-mobile tablink">Categoría A (pos 5-8)</div>
       </a>
       <a href="javascript:void(0)" onclick="openMenu(event, 'CatB1');">
-        <div class="w3-col s2 tablink">Categoría B</div>
+        <div class="w3-col s2 w3-mobile tablink">Categoría B</div>
       </a>
       <a href="javascript:void(0)" onclick="openMenu(event, 'CatB2');">
-        <div class="w3-col s2 tablink">Categoría B (pos 5-8)</div>
+        <div class="w3-col s2 w3-mobile tablink">Categoría B (pos 5-8)</div>
       </a>
     </div>
 
     <div id="Groups" class="w3-container menu w3-padding-48 w3-card">
       <div class="container">
-        <iframe src="https://score7.io/whq1r4mxu1/knockout" width="100%" height="1000px" frameborder="0"></iframe>
+        <iframe src="https://score7.io/yjruvi4kjn/roundrobin" width="100%" height="1000px" frameborder="0"></iframe>
       </div>
     </div>
 
@@ -103,19 +107,19 @@ body, html {
 
     <div id="CatA2" class="w3-container menu w3-padding-48 w3-card">
       <div class="container">
-        <iframe src="https://score7.io/whq1r4mxu1/knockout" width="100%" height="1000px" frameborder="0"></iframe>
+        <iframe src="https://score7.io/c1r0u4vskj/knockout" width="100%" height="1000px" frameborder="0"></iframe>
       </div>
     </div>
 
     <div id="CatB1" class="w3-container menu w3-padding-48 w3-card">
       <div class="container">
-        <iframe src="https://score7.io/whq1r4mxu1/knockout" width="100%" height="400px" frameborder="0"></iframe>
+        <iframe src="https://score7.io/p43h8kzfns/knockout" width="100%" height="400px" frameborder="0"></iframe>
       </div>
     </div>
 
     <div id="CatB2" class="w3-container menu w3-padding-48 w3-card">
       <div class="container">
-        <iframe src="https://score7.io/whq1r4mxu1/knockout" width="100%" height="1000px" frameborder="0"></iframe>
+        <iframe src="https://score7.io/qvcvh0xw8v/knockout" width="100%" height="1000px" frameborder="0"></iframe>
       </div>
     </div>
 
@@ -125,9 +129,85 @@ body, html {
 
 <!-- About Container -->
 <div class="w3-container" id="about">
-  <div class="w3-content" style="max-width:700px">
+  <div class="w3-content" style="max-width:60%">
     <h5 class="w3-center w3-padding-64"><span class="w3-tag w3-indigo w3-wide">REGLAS Y SISTEMA DE JUEGO</span></h5>
-    <p>Esta fase servirá para determinar cuáles son las parejas que jugarán categoría 1 y cuáles la categoría 2, de manera que el nivel de juego en ambas categorías sea lo más parejo posible.
+    <h4><strong>Horarios</strong></h4>
+    <ul>
+      <li>La primera ronda de partidos iniciará a las 10:30. Se solicita a los participantes presentarse en la mesa de control del torneo al menos 15 minutos antes para confirmar presencia, recibir botellas de agua e información adicional.</li>
+      <li>La finalización del torneo y entrega de premios está prevista para las 15:00.</li>
+      <li>Los tiempos límites de los partidos serán establecidos en: 15min (fase de clasificación), 20 min (fases finales), y 25 min para los partidos final, tercer, quinto, y séptimo puesto de ambas categorías. La organización se reserva el derecho a modificar estos tiempos en caso de que por algún imprevisto fuese necesario.</li>
+      <li>Se ruega a los participantes respetar los horarios de inicio y fin de cada partido. Dichos horarios se podrán consultar en el lugar del torneo mediante carteles que facilitaremos para tal fin. Además se podrán consultar online en www.torneosvalencia.es</li>
+     </ul> 
+    <h4><strong>Fase de clasificación</strong></h4>
+    <ul>
+      <li>Esta fase servirá para determinar cuáles son las parejas que jugarán categoría A y cuáles la categoría B, de manera a que el nivel de juego en ambas categorías sea lo más parejo posible.</li>
+      <li>Grupos de 3 o 4 parejas. Los grupos se formarán utilizando el sistema “snake” según la suma del nivel provisto por las parejas al momento de la inscripción.</li> 
+      <li>Partidos al mejor de 1 set con punto/bola de oro. El set y partido se da por terminado cuando una de las parejas alcanza 6 juegos ganados. Si en 15 min no acaba el set gana el partido aquella pareja que tenga más juegos ganados, si ambos tienen el mismo número de juegos, se considerará empate.</li>
+      <li>Punto de oro:  llegado al Deuce (40-40), se juega un último punto para decidir el juego. La pareja que resta elegirá el lado donde se efectuará el servicio.</li>
+      <li>Se sumarán 2 puntos por partido ganado y 1 punto en caso de igualdad en juegos en el tiempo establecido.</li>
+      <li>En caso de igualdad de puntos se tendrán en cuenta para definir las posiciones: en caso de doble empate, pasará la pareja ganadora del enfrentamiento entre ellas. En caso de empate entre más parejas, se seguirán los siguientes criterios por orden: 1º. Diferencia entre juegos ganados y perdidos. 2º. Mayor número de juegos ganados. 3º. Sorteo.</li>
+      <li>Las dos primeras parejas de cada grupo avanzan a cuartos de final de la categoría A.</li>
+      <li>Las parejas 3ra y/o 4ta de cada grupo avanzan a cuartos de final de la categoría B.</li>
+    </ul>
+    <h4><strong>Fases finales (Categoría A y B)</strong></h4>
+    <ul>
+      <li>Las fases finales se jugarán a eliminación directa (llaves knock-out). Las parejas ganadoras avanzarán en el cuadro y las perdedoras jugarán por los puestos, es decir, todas las parejas jugarán el mismo número de partidos.</li>
+      <li>Partidos al mejor de 1 set con punto/bola de oro. El set y partido se da por terminado cuando una de las parejas alcanza 6 juegos ganados. Si en 20 min no acaba el set gana el partido aquella pareja que tenga más juegos ganados. Si al cumplirse el tiempo límite, ambas parejas tienen el mismo número de juegos, se terminará de jugar el juego en disputa si este ya empezó y si ya se disputaron más de 30 puntos en total, de lo contrario se disputará un último punto de oro para decidir el partido.</li>
+      <li>Punto de oro:  llegado al Deuce (40-40), se juega un último punto para decidir el juego. La pareja que resta elegirá el lado donde se efectuará el servicio.</li>
+    </ul>  
+    <h4><strong>Ranking</strong></h4>
+    <ul>
+      <li>Se otorgarán puntos de ranking que se tendrán en cuenta para futuros torneos. Cada integrante de la pareja sumará dichos puntos, y se considerarán para futuros torneos organizados por torneosvalencia.es, incluso si participa con una pareja diferente.</li>
+      <li>Los puntos a otorgar son:</li>
+    </ul>
+    
+    <table id="ranking">
+      <tr>
+        <th>Posición</th>
+        <th>Categoría A</th>
+        <th>Categoría B</th>
+      </tr>
+      <tr>
+        <th>1</th>
+        <th>2000</th>
+        <th>500</th>
+      </tr>
+      <tr>
+        <th>2</th>
+        <th>1500</th>
+        <th>300</th>
+      </tr>
+      <tr>
+        <th>3</th>
+        <th>1200</th>
+        <th>200</th>
+      </tr>
+      <tr>
+        <th>4</th>
+        <th>1000</th>
+        <th>100</th>
+      </tr>
+      <tr>
+        <th>5</th>
+        <th>900</th>
+        <th>80</th>
+      </tr>
+      <tr>
+        <th>6</th>
+        <th>800</th>
+        <th>70</th>
+      </tr>
+      <tr>
+        <th>7</th>
+        <th>700</th>
+        <th>60</th>
+      </tr>
+      <tr>
+        <th>8</th>
+        <th>600</th>
+        <th>50</th>
+      </tr>
+    </table>
 </div>
 
 
