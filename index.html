@@ -1,21 +1,4 @@
 <!DOCTYPE html>
-<?php
-
-
-if($_POST["message"]) {
-
-
-mail("your@email.address", "Here is the subject line",
-
-
-$_POST["insert your message here"]. "From: an@email.address");
-
-
-}
-
-
-?>
-
 <html>
 <title>torneos-valencia</title>
 <meta charset="UTF-8">
@@ -29,9 +12,9 @@ $_POST["insert your message here"]. "From: an@email.address");
 <link href="https://fonts.googleapis.com/css2?family=Gothic+A1:wght@900&display=swap" rel="stylesheet">
 <link rel="icon" type="image/png" href="images/favicon.png">
 <style>
-body, html {
+body, html, h5 {
   height: 100%;
-  font-family: "Lato", sans-serif;
+  font-family: "Montserrat", sans-serif;
 }
 
 .bgimg {
@@ -40,7 +23,22 @@ body, html {
   background-image: url("images/pexels-bogdan-glisik-1405355.jpg");
   min-height: 75%;
 }
-	
+
+.bgimg2{
+    background-position: center;
+    background-size: cover;
+    background-image: url("images/pexels-bogdan-glisik-1405355.jpg");
+    background-repeat: no-repeat;
+    background-origin: content-box;
+    width: 100%;
+    height: 0;
+    min-height:60%;
+    padding-top: 40%; /* (img-height / img-width * container-width) */
+                /* (853 / 1280 * 100) */
+}
+
+.w3-theme {
+color:#fff !important;background-color:#1E3BA2 !important}
 	
 .menu {
   display: none;
@@ -50,30 +48,32 @@ body, html {
 
 <!-- Links (sit on top) -->
 <div class="w3-top">
-  <div class="w3-row w3-padding w3-indigo">
+  <div class="w3-row w3-padding w3-theme">
     <div class="w3-col s3 w3-mobile">
-      <a href="#" class="w3-button w3-block w3-indigo">PRINCIPAL</a>
+      <a href="#" class="w3-button w3-block">PRINCIPAL</a>
     </div>
     <div class="w3-col s3 w3-mobile">
-      <a href="#about" class="w3-button w3-block w3-indigo">INFORMACION</a>
+      <a href="#about" class="w3-button w3-block">INFORMACION</a>
     </div>
     <div class="w3-col s3 w3-mobile">
-      <a href="#menu" class="w3-button w3-block w3-indigo">RESULTADOS</a>
+      <a href="#menu" class="w3-button w3-block">RESULTADOS</a>
     </div>
     <div class="w3-col s3 w3-mobile">
-      <a href="#where" class="w3-button w3-block w3-indigo">CONTACTO</a>
+      <a href="#where" class="w3-button w3-block">CONTACTO</a>
     </div>
   </div>
 </div>
 
 <!-- Header with image -->
 <header class="bgimg w3-display-container" id="home">
-  <div class="w3-display-middle w3-center" style="font-family:'Gothic A1', sans-serif; color:#962d2d;text-shadow: 8px 8px 16px #FFFFFF">
-    <span class="" style="font-size:80px">Torneo Padel<br>Valencia</span>
+  <div class="w3-display-bottommiddle w3-center">
+    <div style="font-family:'Gothic A1', sans-serif; font-size:5vw;color:#DB0000;text-shadow: 8px 8px 16px #FFFFFF">
+      <span>Torneo Padel<br>Valencia</span>
+    </div>
+ 	  <div class="w3-tag w3-white w3-theme w3-display" style="opacity:0.7;font-size:2vw;color:#1E3BA2">
+	   <span>Sábado 12 de Junio de 2021<br>De 10:30 a 15:00<br>CM Valencia Tennis Center. <br>Carrer de Vicente la Roda, 22.</span>
+	 </div>
   </div>
- 	<div class="w3-display-bottommiddle w3-center w3-mobile" style="max-width:300px;font-size:20px;font-weight:600;color:#223A5E;text-shadow: -1px -1px 0px #ffffff">
-	  <span>Sábado 12 de Junio de 2021<br>De 10:30 a 15:00<br>CM Valencia Tennis Center. <br>Carrer de Vicente la Roda, 22.</span>
-	</div>
 </header>
   
 <!-- Add a background color and large text to the whole page -->
@@ -82,55 +82,8 @@ body, html {
 <!-- Menu Container -->
 <div class="w3-container" id="menu">
   <div class="w3-content" style="max-width:90%">
- 
-    <h5 class="w3-center w3-padding-48"><span class="w3-tag w3-indigo w3-wide">CALENDARIO Y RESULTADOS</span></h5>
-  
-    <div class="w3-row w3-center w3-card w3-padding">
-      <a href="javascript:void(0)" onclick="openMenu(event, 'Groups');" id="myLink">
-        <div class="w3-col s2 w3-mobile tablink">Grupos</div>
-      </a>
-      <a href="javascript:void(0)" onclick="openMenu(event, 'CatA1');">
-        <div class="w3-col s2 w3-mobile tablink">Categoría A</div>
-      </a>
-      <a href="javascript:void(0)" onclick="openMenu(event, 'CatA2');">
-        <div class="w3-col s2 w3-mobile tablink">Categoría A (pos 5-8)</div>
-      </a>
-      <a href="javascript:void(0)" onclick="openMenu(event, 'CatB1');">
-        <div class="w3-col s2 w3-mobile tablink">Categoría B</div>
-      </a>
-      <a href="javascript:void(0)" onclick="openMenu(event, 'CatB2');">
-        <div class="w3-col s2 w3-mobile tablink">Categoría B (pos 5-8)</div>
-      </a>
-    </div>
-
-    <div id="Groups" class="w3-container menu w3-padding-48 w3-card">
-      <div class="container">
-        <iframe src="https://score7.io/wabpfspax7/roundrobin" width="100%" height="800px" frameborder="0"></iframe>
-      </div>
-    </div>
-    <div id="CatA1" class="w3-container menu w3-padding-48 w3-card">
-      <div class="container">
-        <iframe src="https://score7.io/whq1r4mxu1/knockout" width="100%" height="800px" frameborder="0"></iframe>
-      </div>
-    </div> 
-
-    <div id="CatA2" class="w3-container menu w3-padding-48 w3-card">
-      <div class="container">
-        <iframe src="https://score7.io/c1r0u4vskj/knockout" width="100%" height="800px" frameborder="0"></iframe>
-      </div>
-    </div>
-
-    <div id="CatB1" class="w3-container menu w3-padding-48 w3-card">
-      <div class="container">
-        <iframe src="https://score7.io/p43h8kzfns/knockout" width="100%" height="800px" frameborder="0"></iframe>
-      </div>
-    </div>
-
-    <div id="CatB2" class="w3-container menu w3-padding-48 w3-card">
-      <div class="container">
-        <iframe src="https://score7.io/qvcvh0xw8v/knockout" width="100%" height="800px" frameborder="0"></iframe>
-      </div>
-    </div>
+    <h5 class="w3-center w3-padding-48"><span class="w3-tag w3-theme w3-wide">CALENDARIO Y RESULTADOS</span></h5>
+    <h3 class="w3-center">Coming soon!</h3>
   </div>
 </div>
 
@@ -138,7 +91,7 @@ body, html {
 <!-- About Container -->
 <div class="w3-container" id="about">
   <div class="w3-content" style="max-width:900px">
-    <h5 class="w3-center w3-padding-64"><span class="w3-tag w3-indigo w3-wide">REGLAS Y SISTEMA DE JUEGO</span></h5>
+    <h5 class="w3-center w3-padding-64"><span class="w3-tag w3-theme w3-wide">REGLAS Y SISTEMA DE JUEGO</span></h5>
     <h4><strong>Horarios</strong></h4>
     <ul>
       <li>La primera ronda de partidos iniciará a las <b>10:30</b>. Se solicita a los participantes presentarse en la mesa de control del torneo al menos <b>15 minutos antes</b> para confirmar presencia, recibir botellas de agua e información adicional.</li>
@@ -225,16 +178,16 @@ body, html {
 <!-- Contact/Area Container -->
 <div class="w3-container" id="where" style="padding-bottom:32px;">
   <div class="w3-content" style="max-width:700px">
-    <h5 class="w3-center w3-padding-48"><span class="w3-tag w3-indigo w3-wide">LUGAR</span></h5>
+    <h5 class="w3-center w3-padding-48"><span class="w3-tag w3-theme w3-wide">LUGAR</span></h5>
     <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12318.102117451448!2d-0.3299039!3d39.4800464!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x568e98966e938b34!2sAcademia%20de%20Tenis%20Valencia%20Tennis%20Center!5e0!3m2!1sen!2ses!4v1622313847419!5m2!1sen!2ses" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-	<p>Síguenos en <a href="http://www.instagram.com/torneovalencia/" title="torneovalencia"><i class="fa fa-instagram w3-hover-opacity" style="font-size:48px;color:red"></i></a></p>
+	<p>Síguenos en <a href="http://www.instagram.com/torneovalencia/" title="torneovalencia"><img src="images/insta.jpeg" class="w3-hover-opacity" style="height:32px"></img></a></p>
 	<p>Para más información, dudas y sugerencias por favor déjanos un mensaje.</p>
     <form action="/action_page.php" target="_blank">
       <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Nombre" required name="Nombre"></p>
       <p><input class="w3-input w3-padding-16 w3-border" type="email" placeholder="Email" required name="Email"></p>
       <p><input class="w3-input w3-padding-16 w3-border" type="number" placeholder="Telefono" required name="Telefono"></p>
       <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Mensaje" required name="Mensaje"></p>
-      <p><button class="w3-button w3-indigo" type="submit">ENVIAR</button></p>
+      <p><button class="w3-button w3-theme" type="submit">ENVIAR</button></p>
     </form>
   </div>
 </div>
@@ -245,7 +198,7 @@ body, html {
 </div>
 
 <!-- Footer -->
-<footer class="w3-center w3-indigo w3-padding-small w3-medium">
+<footer class="w3-center w3-theme w3-padding-small w3-medium">
 	<p>Background image by Bogdan Glisik from <a href="https://www.pexels.com" title="pexels" target="_blank" class="w3-hover-text-green">Pexels</a></p>
 	<p>© 2021 Torneos Valencia.</p>
 </footer>
@@ -260,10 +213,10 @@ function openMenu(evt, menuName) {
   }
   tablinks = document.getElementsByClassName("tablink");
   for (i = 0; i < x.length; i++) {
-    tablinks[i].className = tablinks[i].className.replace(" w3-blue", "");
+    tablinks[i].className = tablinks[i].className.replace(" w3-theme", "");
   }
   document.getElementById(menuName).style.display = "block";
-  evt.currentTarget.firstElementChild.className += " w3-blue";
+  evt.currentTarget.firstElementChild.className += " w3-theme";
 }
 document.getElementById("myLink").click();
 </script>
