@@ -1,8 +1,26 @@
 <!DOCTYPE html>
+<?php
+
+
+if($_POST["message"]) {
+
+
+mail("your@email.address", "Here is the subject line",
+
+
+$_POST["insert your message here"]. "From: an@email.address");
+
+
+}
+
+
+?>
+
 <html>
 <title>torneos-valencia</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-colors-2017.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
@@ -15,14 +33,6 @@ body, html {
   height: 100%;
   font-family: "Lato", sans-serif;
 }
-
- h1{
-  height: 100%;
-  font-family: "Gothic A1", sans-serif;
-  color: #480032;
-  text-shadow: 2px 2px 4px #000000
-}
-
 
 .bgimg {
   background-position: center;
@@ -58,15 +68,14 @@ body, html {
 
 <!-- Header with image -->
 <header class="bgimg w3-display-container" id="home">
-  <div class="w3-display-topmiddle w3-center w3-margin-top w3-padding-64">
-    <h1 class="" style="font-size:80px">Torneo Padel<br>Valencia</h1>
+  <div class="w3-display-middle w3-center" style="font-family:'Gothic A1', sans-serif; color:#962d2d;text-shadow: 8px 8px 16px #FFFFFF">
+    <span class="" style="font-size:80px">Torneo Padel<br>Valencia</span>
   </div>
- 	<div class="w3-display-bottommiddle w3-center" style="width:30%;font-size:20px;font-weight:600;color:#223A5E">
+ 	<div class="w3-display-bottommiddle w3-center w3-mobile" style="max-width:300px;font-size:20px;font-weight:600;color:#223A5E;text-shadow: -1px -1px 0px #ffffff">
 	  <span>Sábado 12 de Junio de 2021<br>De 10:30 a 15:00<br>CM Valencia Tennis Center. <br>Carrer de Vicente la Roda, 22.</span>
 	</div>
 </header>
-
-
+  
 <!-- Add a background color and large text to the whole page -->
 <div class="w3-light-grey w3-large">
 
@@ -128,7 +137,7 @@ body, html {
 
 <!-- About Container -->
 <div class="w3-container" id="about">
-  <div class="w3-content" style="max-width:60%">
+  <div class="w3-content" style="max-width:900px">
     <h5 class="w3-center w3-padding-64"><span class="w3-tag w3-indigo w3-wide">REGLAS Y SISTEMA DE JUEGO</span></h5>
     <h4><strong>Horarios</strong></h4>
     <ul>
@@ -218,7 +227,8 @@ body, html {
   <div class="w3-content" style="max-width:700px">
     <h5 class="w3-center w3-padding-48"><span class="w3-tag w3-indigo w3-wide">LUGAR</span></h5>
     <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12318.102117451448!2d-0.3299039!3d39.4800464!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x568e98966e938b34!2sAcademia%20de%20Tenis%20Valencia%20Tennis%20Center!5e0!3m2!1sen!2ses!4v1622313847419!5m2!1sen!2ses" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-    <p><strong>Info</strong> Para inscripciones, dudas y sugerencias por favor déjanos un mensaje.</p>
+	<p>Síguenos en <a href="http://www.instagram.com/torneovalencia/" title="torneovalencia"><i class="fa fa-instagram w3-hover-opacity" style="font-size:48px;color:red"></i></a></p>
+	<p>Para más información, dudas y sugerencias por favor déjanos un mensaje.</p>
     <form action="/action_page.php" target="_blank">
       <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Nombre" required name="Nombre"></p>
       <p><input class="w3-input w3-padding-16 w3-border" type="email" placeholder="Email" required name="Email"></p>
@@ -229,11 +239,15 @@ body, html {
   </div>
 </div>
 
+	
+                                                          
 <!-- End page content -->
 </div>
 
 <!-- Footer -->
-<footer class="w3-center w3-light-grey w3-padding-48 w3-large">
+<footer class="w3-center w3-indigo w3-padding-small w3-medium">
+	<p>Background image by Bogdan Glisik from <a href="https://www.pexels.com" title="pexels" target="_blank" class="w3-hover-text-green">Pexels</a></p>
+	<p>© 2021 Torneos Valencia.</p>
 </footer>
 
 <script>
