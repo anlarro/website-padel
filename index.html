@@ -12,197 +12,261 @@
 <link href="https://fonts.googleapis.com/css2?family=Gothic+A1:wght@900&display=swap" rel="stylesheet">
 <link rel="icon" type="image/png" href="images/favicon.png">
 <style>
-body, html, h5 {
-  height: 100%;
-  font-family: "Montserrat", sans-serif;
-}
+  body,
+  html,
+  h5 {
+    height: 100%;
+    font-family: "Montserrat", sans-serif;
+  }
 
-.bgimg {
-  background-position: center;
-  background-size: cover;
-  background-image: url("images/pexels-bogdan-glisik-1405355.jpg");
-  min-height: 75%;
-}
+  .bgimg {
+    background-position: center;
+    background-size: cover;
+    background-image: url("images/pexels-bogdan-glisik-1405355.jpg");
+    min-height: 75%;
+  }
 
-.w3-theme {
-color:#fff !important;background-color:#1E3BA2 !important}
+  .w3-theme {
+    color: #fff !important;
+    background-color: #1E3BA2 !important
+  }
 
-.menu {
-  display: none;
-}
+  .menu {
+    display: none;
+  }
 </style>
+
 <body>
 
-<!-- Links (sit on top) -->
-<div class="w3-top">
-  <div class="w3-row w3-padding w3-theme">
-    <div class="w3-col s3 w3-mobile">
-      <a href="#" class="w3-button w3-block">PRINCIPAL</a>
-    </div>
-    <div class="w3-col s3 w3-mobile">
-      <a href="#about" class="w3-button w3-block">INFORMACION</a>
-    </div>
-    <div class="w3-col s3 w3-mobile">
-      <a href="#menu" class="w3-button w3-block">RESULTADOS</a>
-    </div>
-    <div class="w3-col s3 w3-mobile">
-      <a href="#where" class="w3-button w3-block">CONTACTO</a>
+  <!-- Links (sit on top) -->
+  <div class="w3-top">
+    <div class="w3-row w3-padding w3-theme">
+      <div class="w3-col s3 w3-mobile">
+        <a href="#" class="w3-button w3-block">PRINCIPAL</a>
+      </div>
+      <div class="w3-col s3 w3-mobile">
+        <a href="#about" class="w3-button w3-block">INFORMACION</a>
+      </div>
+      <div class="w3-col s3 w3-mobile">
+        <a href="#menu" class="w3-button w3-block">RESULTADOS</a>
+      </div>
+      <div class="w3-col s3 w3-mobile">
+        <a href="#where" class="w3-button w3-block">CONTACTO</a>
+      </div>
     </div>
   </div>
-</div>
 
-<!-- Header with image -->
-<header class="bgimg w3-display-container" id="home">
-  <div class="w3-display-bottommiddle w3-center">
-    <div style="font-family:'Gothic A1', sans-serif; font-size:calc(32px + 4vw);color:#DB0000;text-shadow: 8px 8px 16px #FFFFFF">
-      <span>Torneo Padel<br>Valencia</span>
+  <!-- Header with image -->
+  <header class="bgimg w3-display-container" id="home">
+    <div class="w3-display-bottommiddle w3-center">
+      <div style="font-family:'Gothic A1', sans-serif; font-size:calc(32px + 4vw);color:#DB0000;text-shadow: 8px 8px 16px #FFFFFF">
+        <span>Torneo Padel<br>Valencia</span>
+      </div>
+      <div class="w3-tag w3-white w3-theme w3-display w3-hide-small" style="opacity:0.7;font-size:calc(16px + 1vw);color:#1E3BA2">
+        <span>Sábado 12 de Junio de 2021<br>De 10:30 a 15:00<br>CM Valencia Tennis Center. <br>Carrer de Vicente la Roda, 22.</span>
+      </div>
     </div>
- 	  <div class="w3-tag w3-white w3-theme w3-display w3-hide-small" style="opacity:0.7;font-size:calc(16px + 1vw);color:#1E3BA2">
-	   <span>Sábado 12 de Junio de 2021<br>De 10:30 a 15:00<br>CM Valencia Tennis Center. <br>Carrer de Vicente la Roda, 22.</span>
-	 </div>
+  </header>
+
+  <!-- Add a background color and large text to the whole page -->
+  <div class="w3-light-grey w3-large">
+
+    <!-- Menu Container -->
+    <div class="w3-container" id="menu">
+      <div class="w3-content" style="max-width:90%">
+        <h5 class="w3-center" style="padding-top:64px;padding-bottom:16px"><span class="w3-tag w3-theme w3-wide">CALENDARIO Y RESULTADOS</span></h5>
+        <a href="docs/HorariosGruposCuadros.pdf" download style="text-decoration: none">
+          <p class="w3-hover-opacity w3-padding" style="text-align:center;color:#DB0000"><strong>Calendario completo con horarios (descargar)</strong></p>
+        </a>
+        <div class="w3-row w3-center w3-card w3-padding">
+          <a href="javascript:void(0)" onclick="openMenu(event, 'Groups');" id="myLink">
+            <div class="w3-col s2 w3-mobile tablink">Grupos</div>
+          </a>
+          <a href="javascript:void(0)" onclick="openMenu(event, 'CatA1');">
+            <div class="w3-col s2 w3-mobile tablink">Categoría A</div>
+          </a>
+          <a href="javascript:void(0)" onclick="openMenu(event, 'CatA2');">
+            <div class="w3-col s2 w3-mobile tablink">Categoría A (pos 5-8)</div>
+          </a>
+          <a href="javascript:void(0)" onclick="openMenu(event, 'CatB1');">
+            <div class="w3-col s2 w3-mobile tablink">Categoría B</div>
+          </a>
+          <a href="javascript:void(0)" onclick="openMenu(event, 'CatB2');">
+            <div class="w3-col s2 w3-mobile tablink">Categoría B (pos 5-8)</div>
+          </a>
+        </div>
+        <div id="Groups" class="w3-container menu w3-padding-48 w3-card">
+          <div class="container">
+            <iframe src="https://score7.io/wabpfspax7/roundrobin" width="100%" height="800px" frameborder="0"></iframe>
+          </div>
+        </div>
+        <div id="CatA1" class="w3-container menu w3-padding-48 w3-card">
+          <div class="container">
+            <iframe src="https://score7.io/whq1r4mxu1/knockout" width="100%" height="800px" frameborder="0"></iframe>
+          </div>
+        </div>
+
+        <div id="CatA2" class="w3-container menu w3-padding-48 w3-card">
+          <div class="container">
+            <iframe src="https://score7.io/c1r0u4vskj/knockout" width="100%" height="800px" frameborder="0"></iframe>
+          </div>
+        </div>
+
+        <div id="CatB1" class="w3-container menu w3-padding-48 w3-card">
+          <div class="container">
+            <iframe src="https://score7.io/p43h8kzfns/knockout" width="100%" height="800px" frameborder="0"></iframe>
+          </div>
+        </div>
+
+        <div id="CatB2" class="w3-container menu w3-padding-48 w3-card">
+          <div class="container">
+            <iframe src="https://score7.io/qvcvh0xw8v/knockout" width="100%" height="800px" frameborder="0"></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- About Container -->
+    <div class="w3-container" id="about">
+      <div class="w3-content" style="max-width:900px">
+        <h5 class="w3-center w3-padding-32"><span class="w3-tag w3-theme w3-wide">REGLAS Y SISTEMA DE JUEGO</span></h5>
+        <a href="docs/Reglas y Sistema de Juego.pdf" download style="text-decoration: none">
+          <p class="w3-hover-opacity" style="text-align:center;color:#DB0000"><strong>Descargar documento (pdf)</strong></p>
+        </a>
+        <h4 style="color:#1E3BA2"><strong>1. Horarios</strong></h4>
+        <ul>
+          <li>La primera ronda de partidos iniciará a las <b>10:30</b>. Se solicita a los participantes presentarse en la mesa de control del torneo al menos <b style="color:#DB0000">15 minutos antes</b> para confirmar presencia, recibir botellas de
+            agua e información adicional.</li>
+          <li>La finalización del torneo y entrega de premios está prevista para las 15:00.</li>
+          <li>Los tiempos límites de los partidos serán establecidos en: 15min (fase de clasificación), 20 min (fases finales), y 25 min para los partidos final, tercer, quinto, y séptimo puesto de ambas categorías. La organización se reserva el
+            derecho a modificar estos tiempos en caso de que por algún imprevisto fuese necesario.</li>
+          <li>Antes del <b>primer partido</b> de la fase de grupos se dispondrá de 10 min de calentamiento en pista.</li>
+          <li>Se ruega a los participantes <b>respetar los horarios de inicio y fin de cada partido</b>, y estén preparados para entrar en la pista que les corresponde unos minutos antes de la hora establecida. Dichos horarios se podrán consultar en
+            el lugar del torneo mediante carteles que facilitaremos para tal fin. Además se podrán consultar online en esta web</li>
+          <li>Si una pareja no está presente para su partido a la hora establecida, se tendrá una tolerancia máxima de 5 min y si no se presentan se les dará el partido por perdido. Si el partido empieza con retraso, este durará hasta la hora final
+            establecida (por ejemplo, si el partido está marcado para inicio a las 10:40 pero porque una o ambas parejas llegan con retraso el partido empieza a las 10:45, este partido durará solamente 10 min y terminará a las 10:55 (tiempo final
+            establecido).</li>
+        </ul>
+        <h4 style="color:#1E3BA2"><strong>2. Fase de clasificación</strong></h4>
+        <ul>
+          <li>Esta fase servirá para determinar cuáles son las parejas que jugarán categoría A y cuáles la categoría B, de manera a que el nivel de juego en ambas categorías sea lo más parejo posible.</li>
+          <li>Grupos de 3 o 4 parejas. Los grupos se formarán utilizando el sistema “snake” según la suma del nivel provisto por las parejas al momento de la inscripción.</li>
+          <li>Partidos al mejor de <b>1 set con punto/bola de oro para cada juego</b>. El set y partido se da por terminado cuando una de las parejas alcanza <b>6 juegos ganados</b> (no habrá diferencia de 2 juegos ni tie-break). Si en 15 min no
+            acaba el set gana el partido aquella pareja que tenga más juegos ganados, si ambos tienen el mismo número de juegos, se considerará empate (solo se aplica a la fase de grupos).</li>
+          <li><b>Punto de oro:</b> llegado al Deuce (40-40), se juega un último punto para decidir el juego. La pareja que resta elegirá el lado donde se efectuará el servicio.</li>
+          <li>Se sumarán 2 puntos por partido ganado y 1 punto en caso de igualdad en juegos en el tiempo establecido.</li>
+          <li>En caso de igualdad de puntos se tendrán en cuenta para definir las posiciones: En caso de doble empate, pasará la pareja ganadora del enfrentamiento entre ellas. En caso de empate entre más parejas, se seguirán los siguientes
+            criterios por orden: 1º. Diferencia entre juegos ganados y perdidos. 2º. Mayor número de juegos ganados. 3º. Sorteo.
+          </li>
+          <li>Las <b>dos primeras</b> parejas de cada grupo avanzan a cuartos de final de la <b>categoría A</b>.</li>
+          <li>Las parejas <b>3ra y/o 4ta</b> de cada grupo avanzan a cuartos de final de la <b>categoría B</b>.</li>
+        </ul>
+        <h4 style="color:#1E3BA2"><strong>3. Fases finales (Categoría A y B)</strong></h4>
+        <ul>
+          <li>Las fases finales se jugarán en llaves. Las parejas ganadoras avanzarán en el cuadro y las perdedoras jugarán por los puestos, es decir, todas las parejas seguirán jugando hasta que se definan todos los puestos.</li>
+          <li>Partidos al mejor de <b>1 set con punto/bola de oro para cada juego</b>. El set y partido se da por terminado cuando una de las parejas alcanza <b>6 juegos ganados</b> (no habrá diferencia de 2 juegos ni tie-break). Si en <b>20 min (25
+              min</b> para las finales) no acaba el set, ganará el partido aquella pareja que tenga más juegos ganados. Si al cumplirse el tiempo límite, ambas parejas tienen el mismo número de juegos, ganará la pareja que tenga más puntos en el
+            juego que está en disputa, y si el empate persiste se jugará un último punto para definir el partido.</li>
+          <li><b>Punto de oro:</b> llegado al Deuce (40-40), se juega un último punto para decidir el juego. La pareja que resta elegirá el lado donde se efectuará el servicio.</li>
+        </ul>
+        <h4 style="color:#1E3BA2"><strong>4. Ranking</strong></h4>
+        <ul>
+          <li>Se otorgarán puntos de ranking que se tendrán en cuenta para futuros torneos. Cada integrante de la pareja sumará dichos puntos, y se considerarán para futuros torneos organizados por www.torneosvalencia.es, incluso si participa con
+            una pareja diferente.</li>
+          <li>Los puntos a otorgar son:</li>
+        </ul>
+
+        <table id="ranking">
+          <tr>
+            <th>Posición</th>
+            <th>Categoría A</th>
+            <th>Categoría B</th>
+          </tr>
+          <tr>
+            <th>1</th>
+            <th>2000</th>
+            <th>500</th>
+          </tr>
+          <tr>
+            <th>2</th>
+            <th>1500</th>
+            <th>300</th>
+          </tr>
+          <tr>
+            <th>3</th>
+            <th>1200</th>
+            <th>200</th>
+          </tr>
+          <tr>
+            <th>4</th>
+            <th>1000</th>
+            <th>100</th>
+          </tr>
+          <tr>
+            <th>5</th>
+            <th>900</th>
+            <th>80</th>
+          </tr>
+          <tr>
+            <th>6</th>
+            <th>800</th>
+            <th>70</th>
+          </tr>
+          <tr>
+            <th>7</th>
+            <th>700</th>
+            <th>60</th>
+          </tr>
+          <tr>
+            <th>8</th>
+            <th>600</th>
+            <th>50</th>
+          </tr>
+        </table>
+      </div>
+
+
+      <!-- Contact/Area Container -->
+      <div class="w3-container" id="where" style="padding-bottom:32px;">
+        <div class="w3-content" style="max-width:700px">
+          <h5 class="w3-center w3-padding-48"><span class="w3-tag w3-theme w3-wide">LUGAR</span></h5>
+          <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12318.102117451448!2d-0.3299039!3d39.4800464!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x568e98966e938b34!2sAcademia%20de%20Tenis%20Valencia%20Tennis%20Center!5e0!3m2!1sen!2ses!4v1622313847419!5m2!1sen!2ses"
+            width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+          <p style="font-size:24px"><strong>Síguenos en </strong><a href="http://www.instagram.com/torneovalencia/" title="torneovalencia"><img src="images/insta.jpeg" class="w3-hover-opacity" style="height:48px"></a></p>
+          <img src="images/poster.jpeg" style="width:100%;max-width:700px">
+        </div>
+      </div>
+
+    </div>
+
+    <!-- End page content -->
   </div>
-</header>
 
-<!-- Add a background color and large text to the whole page -->
-<div class="w3-light-grey w3-large">
+  <!-- Footer -->
+  <footer class="w3-center w3-theme w3-padding-small w3-medium">
+    <p>Background image by Bogdan Glisik from <a href="https://www.pexels.com" title="pexels" target="_blank" class="w3-hover-text-green">Pexels</a></p>
+    <p>© 2021 Torneos Valencia.</p>
+  </footer>
 
-<!-- Menu Container -->
-<div class="w3-container" id="menu">
-  <div class="w3-content" style="max-width:90%">
-    <h5 class="w3-center w3-padding-48"><span class="w3-tag w3-theme w3-wide">CALENDARIO Y RESULTADOS</span></h5>
-    <h3 class="w3-center">Coming soon!</h3>
-  </div>
-</div>
-
-
-<!-- About Container -->
-<div class="w3-container" id="about">
-  <div class="w3-content" style="max-width:900px">
-    <h5 class="w3-center" style="padding-top:64px;padding-bottom:32px"><span class="w3-tag w3-theme w3-wide">REGLAS Y SISTEMA DE JUEGO</span></h5>
-    <a href="docs/Reglas y Sistema de Juego.pdf" download>
-      <p class="w3-hover-opacity" style="text-align:center;color:#DB0000"><strong>Descargar documento (pdf)</strong></p>
-    </a>
-    <h4 style="color:#1E3BA2"><strong>1. Horarios</strong></h4>
-    <ul>
-      <li>La primera ronda de partidos iniciará a las <b>10:30</b>. Se solicita a los participantes presentarse en la mesa de control del torneo al menos <b style="color:#DB0000">15 minutos antes</b> para confirmar presencia, recibir botellas de agua e información adicional.</li>
-      <li>La finalización del torneo y entrega de premios está prevista para las 15:00.</li>
-      <li>Los tiempos límites de los partidos serán establecidos en: 15min (fase de clasificación), 20 min (fases finales), y 25 min para los partidos final, tercer, quinto, y séptimo puesto de ambas categorías. La organización se reserva el derecho a modificar estos tiempos en caso de que por algún imprevisto fuese necesario.</li>
-      <li>Antes del <b>primer partido</b> de la fase de grupos se dispondrá de 10 min de calentamiento en pista.</li>
-      <li>Se ruega a los participantes <b>respetar los horarios de inicio y fin de cada partido</b>, y estén preparados para entrar en la pista que les corresponde unos minutos antes de la hora establecida.  Dichos horarios se podrán consultar en el lugar del torneo mediante carteles que facilitaremos para tal fin. Además se podrán consultar online en esta web</li>
-      <li>Si una pareja no está presente para su partido a la hora establecida, se tendrá una tolerancia máxima de 5 min y si no se presentan se les dará el partido por perdido. Si el partido empieza con retraso, este durará hasta la hora final establecida (por ejemplo, si el partido está marcado para inicio a las 10:40 pero porque una o ambas parejas llegan con retraso el partido empieza a las 10:45, este partido durará solamente 10 min y terminará a las 10:55 (tiempo final establecido).</li>
-     </ul>
-    <h4 style="color:#1E3BA2"><strong>2. Fase de clasificación</strong></h4>
-    <ul>
-      <li>Esta fase servirá para determinar cuáles son las parejas que jugarán categoría A y cuáles la categoría B, de manera a que el nivel de juego en ambas categorías sea lo más parejo posible.</li>
-      <li>Grupos de 3 o 4 parejas. Los grupos se formarán utilizando el sistema “snake” según la suma del nivel provisto por las parejas al momento de la inscripción.</li>
-      <li>Partidos al mejor de <b>1 set con punto/bola de oro para cada juego</b>. El set y partido se da por terminado cuando una de las parejas alcanza <b>6 juegos ganados</b> (no habrá diferencia de 2 juegos ni tie-break). Si en 15 min no acaba el set gana el partido aquella pareja que tenga más juegos ganados, si ambos tienen el mismo número de juegos, se considerará empate (solo se aplica a la fase de grupos).</li>
-      <li><b>Punto de oro:</b>  llegado al Deuce (40-40), se juega un último punto para decidir el juego. La pareja que resta elegirá el lado donde se efectuará el servicio.</li>
-      <li>Se sumarán 2 puntos por partido ganado y 1 punto en caso de igualdad en juegos en el tiempo establecido.</li>
-      <li>En caso de igualdad de puntos se tendrán en cuenta para definir las posiciones: En caso de doble empate, pasará la pareja ganadora del enfrentamiento entre ellas. En caso de empate entre más parejas, se seguirán los siguientes criterios por orden: 1º. Diferencia entre juegos ganados y perdidos. 2º. Mayor número de juegos ganados. 3º. Sorteo.
-</li>
-      <li>Las <b>dos primeras</b> parejas de cada grupo avanzan a cuartos de final de la <b>categoría A</b>.</li>
-      <li>Las parejas <b>3ra y/o 4ta</b> de cada grupo avanzan a cuartos de final de la <b>categoría B</b>.</li>
-    </ul>
-    <h4 style="color:#1E3BA2"><strong>3. Fases finales (Categoría A y B)</strong></h4>
-    <ul>
-      <li>Las fases finales se jugarán en llaves. Las parejas ganadoras avanzarán en el cuadro y las perdedoras jugarán por los puestos, es decir, todas las parejas seguirán jugando hasta que se definan todos los puestos.</li>
-      <li>Partidos al mejor de <b>1 set con punto/bola de oro para cada juego</b>. El set y partido se da por terminado cuando una de las parejas alcanza <b>6 juegos ganados</b> (no habrá diferencia de 2 juegos ni tie-break). Si en <b>20 min (25 min</b> para las finales) no acaba el set, ganará el partido aquella pareja que tenga más juegos ganados. Si al cumplirse el tiempo límite, ambas parejas tienen el mismo número de juegos, ganará la pareja que tenga más puntos en el juego que está en disputa, y si el empate persiste se jugará un último punto para definir el partido.</li>
-      <li><b>Punto de oro:</b>  llegado al Deuce (40-40), se juega un último punto para decidir el juego. La pareja que resta elegirá el lado donde se efectuará el servicio.</li>
-    </ul>
-    <h4 style="color:#1E3BA2"><strong>4. Ranking</strong></h4>
-    <ul>
-      <li>Se otorgarán puntos de ranking que se tendrán en cuenta para futuros torneos. Cada integrante de la pareja sumará dichos puntos, y se considerarán para futuros torneos organizados por www.torneosvalencia.es, incluso si participa con una pareja diferente.</li>
-      <li>Los puntos a otorgar son:</li>
-    </ul>
-
-    <table id="ranking">
-      <tr>
-        <th>Posición</th>
-        <th>Categoría A</th>
-        <th>Categoría B</th>
-      </tr>
-      <tr>
-        <th>1</th>
-        <th>2000</th>
-        <th>500</th>
-      </tr>
-      <tr>
-        <th>2</th>
-        <th>1500</th>
-        <th>300</th>
-      </tr>
-      <tr>
-        <th>3</th>
-        <th>1200</th>
-        <th>200</th>
-      </tr>
-      <tr>
-        <th>4</th>
-        <th>1000</th>
-        <th>100</th>
-      </tr>
-      <tr>
-        <th>5</th>
-        <th>900</th>
-        <th>80</th>
-      </tr>
-      <tr>
-        <th>6</th>
-        <th>800</th>
-        <th>70</th>
-      </tr>
-      <tr>
-        <th>7</th>
-        <th>700</th>
-        <th>60</th>
-      </tr>
-      <tr>
-        <th>8</th>
-        <th>600</th>
-        <th>50</th>
-      </tr>
-    </table>
-</div>
-
-
-<!-- Contact/Area Container -->
-<div class="w3-container" id="where" style="padding-bottom:32px;">
-  <div class="w3-content" style="max-width:700px">
-    <h5 class="w3-center w3-padding-48"><span class="w3-tag w3-theme w3-wide">LUGAR</span></h5>
-    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12318.102117451448!2d-0.3299039!3d39.4800464!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x568e98966e938b34!2sAcademia%20de%20Tenis%20Valencia%20Tennis%20Center!5e0!3m2!1sen!2ses!4v1622313847419!5m2!1sen!2ses" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-	<p style="font-size:24px"><strong>Síguenos en </strong><a href="http://www.instagram.com/torneovalencia/" title="torneovalencia"><img src="images/insta.jpeg" class="w3-hover-opacity" style="height:48px"></a></p>
-	<img src="images/poster.jpeg" style="width:100%;max-width:700px">
-  </div>
-</div>
-
-
-
-<!-- End page content -->
-</div>
-
-<!-- Footer -->
-<footer class="w3-center w3-theme w3-padding-small w3-medium">
-	<p>Background image by Bogdan Glisik from <a href="https://www.pexels.com" title="pexels" target="_blank" class="w3-hover-text-green">Pexels</a></p>
-	<p>© 2021 Torneos Valencia.</p>
-</footer>
-
-<script>
-// Tabbed Menu
-function openMenu(evt, menuName) {
-  var i, x, tablinks;
-  x = document.getElementsByClassName("menu");
-  for (i = 0; i < x.length; i++) {
-    x[i].style.display = "none";
-  }
-  tablinks = document.getElementsByClassName("tablink");
-  for (i = 0; i < x.length; i++) {
-    tablinks[i].className = tablinks[i].className.replace(" w3-theme", "");
-  }
-  document.getElementById(menuName).style.display = "block";
-  evt.currentTarget.firstElementChild.className += " w3-theme";
-}
-document.getElementById("myLink").click();
-</script>
+  <script>
+    // Tabbed Menu
+    function openMenu(evt, menuName) {
+      var i, x, tablinks;
+      x = document.getElementsByClassName("menu");
+      for (i = 0; i < x.length; i++) {
+        x[i].style.display = "none";
+      }
+      tablinks = document.getElementsByClassName("tablink");
+      for (i = 0; i < x.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace(" w3-theme", "");
+      }
+      document.getElementById(menuName).style.display = "block";
+      evt.currentTarget.firstElementChild.className += " w3-theme";
+    }
+    document.getElementById("myLink").click();
+  </script>
 
 </body>
+
 </html>
